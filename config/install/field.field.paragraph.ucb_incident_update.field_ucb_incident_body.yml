@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ucb_incident_body
+    - paragraphs.paragraphs_type.ucb_incident_update
+  module:
+    - text
+id: paragraph.ucb_incident_update.field_ucb_incident_body
+field_name: field_ucb_incident_body
+entity_type: paragraph
+bundle: ucb_incident_update
+label: Body
+description: 'Any content to be displayed as part of this incident update.  This will generally be the main content for incident updates.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

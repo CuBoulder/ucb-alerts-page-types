@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Incident Types'
+vid: ucb_incident_types
+description: 'Vocabulary of the types of Incidents that have been or may be needed on campus.  '
+weight: 0

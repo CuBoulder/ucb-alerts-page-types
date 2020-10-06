@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ucb_incident_types.field_ucb_incident_sidebar_boil
+    - taxonomy.vocabulary.ucb_incident_types
+  module:
+    - text
+id: taxonomy_term.ucb_incident_types.default
+targetEntityType: taxonomy_term
+bundle: ucb_incident_types
+mode: default
+content:
+  field_ucb_incident_sidebar_boil:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  description: true

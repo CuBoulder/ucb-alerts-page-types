@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_cta_body
+    - node.type.ucb_incident
+  module:
+    - text
+id: node.ucb_incident.field_ucb_incident_cta_body
+field_name: field_ucb_incident_cta_body
+entity_type: node
+bundle: ucb_incident
+label: 'Call To Action Body'
+description: 'Main content section for the top of the active incident.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

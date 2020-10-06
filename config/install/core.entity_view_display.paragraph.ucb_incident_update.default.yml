@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ucb_incident_update.field_ucb_incident_body
+    - field.field.paragraph.ucb_incident_update.field_ucb_incident_images
+    - field.field.paragraph.ucb_incident_update.field_ucb_incident_links
+    - field.field.paragraph.ucb_incident_update.field_ucb_incident_map_link
+    - field.field.paragraph.ucb_incident_update.field_ucb_incident_timestamp
+    - field.field.paragraph.ucb_incident_update.field_ucb_incident_title
+    - paragraphs.paragraphs_type.ucb_incident_update
+  module:
+    - datetime
+    - text
+id: paragraph.ucb_incident_update.default
+targetEntityType: paragraph
+bundle: ucb_incident_update
+mode: default
+content:
+  field_ucb_incident_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ucb_incident_map_link:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ucb_incident_timestamp:
+    weight: 1
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ucb_incident_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  field_ucb_incident_images: true
+  field_ucb_incident_links: true

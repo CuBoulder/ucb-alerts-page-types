@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ucb_incident_map_link
+    - paragraphs.paragraphs_type.ucb_incident_update
+id: paragraph.ucb_incident_update.field_ucb_incident_map_link
+field_name: field_ucb_incident_map_link
+entity_type: paragraph
+bundle: ucb_incident_update
+label: 'Map Link'
+description: "Link to the CU Boulder map ID.  Will be displayed as an embedded image that will be linked back to the CU Boulder Map website.  \r\nValid content is either the sharable link (e.g. https://www.colorado.edu/map/?id=336#!m/193872 ) or just the map ID number (e.g. 193872 ) "
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

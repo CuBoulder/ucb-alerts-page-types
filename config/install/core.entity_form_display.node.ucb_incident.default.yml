@@ -1,0 +1,203 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ucb_incident.field_ucb_incident_cta_body
+    - field.field.node.ucb_incident.field_ucb_incident_cta_image
+    - field.field.node.ucb_incident.field_ucb_incident_cta_links
+    - field.field.node.ucb_incident.field_ucb_incident_events
+    - field.field.node.ucb_incident.field_ucb_incident_priority_flag
+    - field.field.node.ucb_incident.field_ucb_incident_sidebar_body
+    - field.field.node.ucb_incident.field_ucb_incident_status
+    - field.field.node.ucb_incident.field_ucb_incident_type
+    - node.type.ucb_incident
+  module:
+    - field_group
+    - link
+    - media_library
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_ucb_incident_tabs:
+      children:
+        - group_ucb_incident_status
+        - group_ucb_incident_cta
+        - group_ucb_incident_sidebar
+        - group_ucb_incident_priority
+      parent_name: ''
+      weight: 4
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Tabs
+    group_ucb_incident_status:
+      children:
+        - title
+        - field_ucb_incident_type
+        - field_ucb_incident_status
+        - field_ucb_incident_events
+      parent_name: group_ucb_incident_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        formatter: open
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Details
+    group_ucb_incident_sidebar:
+      children:
+        - field_ucb_incident_sidebar_body
+      parent_name: group_ucb_incident_tabs
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Sidebar
+    group_ucb_incident_priority:
+      children:
+        - field_ucb_incident_priority_flag
+      parent_name: group_ucb_incident_tabs
+      weight: 24
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Priority
+    group_ucb_incident_cta:
+      children:
+        - field_ucb_incident_cta_body
+        - field_ucb_incident_cta_links
+        - field_ucb_incident_cta_image
+      parent_name: group_ucb_incident_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: 'Call to action section to be displayed at the top of the active incident with the most important take-away information.  '
+        required_fields: true
+      label: 'Call To Action'
+id: node.ucb_incident.default
+targetEntityType: node
+bundle: ucb_incident
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ucb_incident_cta_body:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ucb_incident_cta_image:
+    type: media_library_widget
+    weight: 30
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_ucb_incident_cta_links:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ucb_incident_events:
+    type: entity_reference_paragraphs
+    weight: -2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ucb_incident_update
+    third_party_settings: {  }
+    region: content
+  field_ucb_incident_priority_flag:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_ucb_incident_sidebar_body:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ucb_incident_status:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ucb_incident_type:
+    weight: -4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

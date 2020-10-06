@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_cta_links
+    - node.type.ucb_incident
+  module:
+    - link
+id: node.ucb_incident.field_ucb_incident_cta_links
+field_name: field_ucb_incident_cta_links
+entity_type: node
+bundle: ucb_incident
+label: 'Call To Action Links'
+description: 'Any links to important information or actions that lead the user off of this page.  Will be displayed as a list of buttons that open links in a new window.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

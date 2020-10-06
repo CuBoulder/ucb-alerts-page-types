@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: cu_boulder_incident_page_path
+label: 'CU Boulder Incident Page Path'
+type: 'canonical_entities:node'
+pattern: '/incident/[current-date:html_date]/[node:title]'
+selection_criteria:
+  979f5f1c-f823-4560-b363-e3c4e32a62e0:
+    id: node_type
+    bundles:
+      ucb_incident: ucb_incident
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 979f5f1c-f823-4560-b363-e3c4e32a62e0
+selection_logic: and
+weight: -5
+relationships: {  }

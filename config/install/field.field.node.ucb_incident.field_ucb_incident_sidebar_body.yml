@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_sidebar_body
+    - node.type.ucb_incident
+  module:
+    - text
+id: node.ucb_incident.field_ucb_incident_sidebar_body
+field_name: field_ucb_incident_sidebar_body
+entity_type: node
+bundle: ucb_incident
+label: 'Sidebar Body'
+description: 'Optional additional information to be displayed in the sidebar, such as contact information, general safety information or additional closures of services related to main campus. Also useful for pinning important information near the top of the page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

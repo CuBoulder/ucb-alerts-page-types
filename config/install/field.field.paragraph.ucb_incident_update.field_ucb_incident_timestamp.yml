@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ucb_incident_timestamp
+    - paragraphs.paragraphs_type.ucb_incident_update
+  module:
+    - datetime
+id: paragraph.ucb_incident_update.field_ucb_incident_timestamp
+field_name: field_ucb_incident_timestamp
+entity_type: paragraph
+bundle: ucb_incident_update
+label: Timestamp
+description: 'Date and time of this update. Will be displayed in bold at the top of the incident update.'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

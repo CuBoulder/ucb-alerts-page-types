@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_priority_flag
+    - node.type.ucb_incident
+  module:
+    - options
+id: node.ucb_incident.field_ucb_incident_priority_flag
+field_name: field_ucb_incident_priority_flag
+entity_type: node
+bundle: ucb_incident
+label: 'Priority Flag'
+description: 'This flag determines the order in which multiple active incidents are displayed and only matters if there are several active incidents at the same time. High priority is displayed first; low priority is displayed last. Default priority is medium.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

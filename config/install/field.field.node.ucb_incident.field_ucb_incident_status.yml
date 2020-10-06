@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_status
+    - node.type.ucb_incident
+  module:
+    - options
+id: node.ucb_incident.field_ucb_incident_status
+field_name: field_ucb_incident_status
+entity_type: node
+bundle: ucb_incident
+label: Status
+description: "Please set the current status of this incident. \r\n<ul>\r\n<li>ACTIVE - an incident that is currently ongoing or which still needs to be displayed on the front page of the Alerts website.</li>\r\n<li>Closed - will archive this incident.  Details for this incident will no longer be displayed on the front page.</li>\r\n<li>Preparing - used when crafting the approved language for this incident initially.  Will not be displayed on the front page. </li>\r\n</ul>"
+required: true
+translatable: false
+default_value:
+  -
+    value: active
+default_value_callback: ''
+settings: {  }
+field_type: list_string

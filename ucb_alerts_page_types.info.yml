@@ -1,0 +1,24 @@
+name: 'CU Boulder Alerts Page Types'
+description: 'Page schemas needed for the CU Boulder Alerts website.  '
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - entity_reference_revisions
+  - field
+  - field_group
+  - link
+  - media
+  - media_library
+  - menu_ui
+  - node
+  - options
+  - paragraphs
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - user
+  - views
+version: 8.x-0.1-alpha-20200512
+core_incompatible: false

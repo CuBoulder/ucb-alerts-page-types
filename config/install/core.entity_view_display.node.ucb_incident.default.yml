@@ -1,0 +1,97 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ucb_incident.field_ucb_incident_cta_body
+    - field.field.node.ucb_incident.field_ucb_incident_cta_image
+    - field.field.node.ucb_incident.field_ucb_incident_cta_links
+    - field.field.node.ucb_incident.field_ucb_incident_events
+    - field.field.node.ucb_incident.field_ucb_incident_priority_flag
+    - field.field.node.ucb_incident.field_ucb_incident_sidebar_body
+    - field.field.node.ucb_incident.field_ucb_incident_status
+    - field.field.node.ucb_incident.field_ucb_incident_type
+    - node.type.ucb_incident
+  module:
+    - entity_reference_revisions
+    - link
+    - options
+    - text
+    - user
+id: node.ucb_incident.default
+targetEntityType: node
+bundle: ucb_incident
+mode: default
+content:
+  field_ucb_incident_cta_body:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ucb_incident_cta_image:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_ucb_incident_cta_links:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ucb_incident_events:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_ucb_incident_priority_flag:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ucb_incident_sidebar_body:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ucb_incident_status:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ucb_incident_type:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

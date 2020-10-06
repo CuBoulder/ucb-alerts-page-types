@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ucb_incident_title
+    - paragraphs.paragraphs_type.ucb_incident_update
+id: paragraph.ucb_incident_update.field_ucb_incident_title
+field_name: field_ucb_incident_title
+entity_type: paragraph
+bundle: ucb_incident_update
+label: Title
+description: 'Mainline content for this incident update.  This will be displayed in bolder text above the timestamp.  This field is recommended, but not required.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

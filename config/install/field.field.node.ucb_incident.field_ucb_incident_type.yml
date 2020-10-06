@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_type
+    - node.type.ucb_incident
+    - taxonomy.vocabulary.ucb_incident_types
+id: node.ucb_incident.field_ucb_incident_type
+field_name: field_ucb_incident_type
+entity_type: node
+bundle: ucb_incident
+label: Type
+description: "<p>Please select the type of incident for this event.  Standard, important information will be displayed in the sidebar as defined by the type selected.</p>\r\n<p><a href=\"[site:url]admin/structure/taxonomy/manage/ucb_incident_types/add\" target=\"_new\">You may also add a new type</a> if the type you need does not already exist in the list.</p>"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ucb_incident_types: ucb_incident_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

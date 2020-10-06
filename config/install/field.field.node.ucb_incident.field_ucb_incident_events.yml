@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_events
+    - node.type.ucb_incident
+    - paragraphs.paragraphs_type.ucb_incident_update
+  module:
+    - entity_reference_revisions
+id: node.ucb_incident.field_ucb_incident_events
+field_name: field_ucb_incident_events
+entity_type: node
+bundle: ucb_incident
+label: Events
+description: 'Listing of all approved messaged to be displayed along with this incident.  Details will normally be displayed in a time-ordered sequence with the newest information at the top of the page.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ucb_incident_update: ucb_incident_update
+    target_bundles_drag_drop:
+      ucb_incident_update:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

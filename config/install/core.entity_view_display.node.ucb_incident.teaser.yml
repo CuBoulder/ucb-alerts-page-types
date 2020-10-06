@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ucb_incident.field_ucb_incident_cta_body
+    - field.field.node.ucb_incident.field_ucb_incident_cta_image
+    - field.field.node.ucb_incident.field_ucb_incident_cta_links
+    - field.field.node.ucb_incident.field_ucb_incident_events
+    - field.field.node.ucb_incident.field_ucb_incident_priority_flag
+    - field.field.node.ucb_incident.field_ucb_incident_sidebar_body
+    - field.field.node.ucb_incident.field_ucb_incident_status
+    - field.field.node.ucb_incident.field_ucb_incident_type
+    - node.type.ucb_incident
+  module:
+    - user
+id: node.ucb_incident.teaser
+targetEntityType: node
+bundle: ucb_incident
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ucb_incident_cta_body: true
+  field_ucb_incident_cta_image: true
+  field_ucb_incident_cta_links: true
+  field_ucb_incident_events: true
+  field_ucb_incident_priority_flag: true
+  field_ucb_incident_sidebar_body: true
+  field_ucb_incident_status: true
+  field_ucb_incident_type: true

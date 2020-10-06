@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_incident_cta_image
+    - media.type.image
+    - node.type.ucb_incident
+id: node.ucb_incident.field_ucb_incident_cta_image
+field_name: field_ucb_incident_cta_image
+entity_type: node
+bundle: ucb_incident
+label: 'Call To Action Image'
+description: 'Optional image to be displayed along with the rest of the content in the call to action section at the top of the active incident.  '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
