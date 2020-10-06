@@ -2,6 +2,7 @@ name: 'CU Boulder Alerts Page Types'
 description: 'Page schemas needed for the CU Boulder Alerts website.  '
 type: module
 core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - datetime
   - entity_reference_revisions
