@@ -1,0 +1,6 @@
+{
+    "name": "cu-boulder/ucb-alerts-page-types",
+    "description": "Drupal 8/9 custom page schemas for CU Boulder alerts website",
+    "license": "MIT",
+    "type": "drupal-module"
+}
